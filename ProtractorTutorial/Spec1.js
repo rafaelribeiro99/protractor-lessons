@@ -1,19 +1,19 @@
 /**
- * Autor: Rafael Luna Ribeiro - Estudos Protractor
+ * Author: Rafael Luna Ribeiro - Protractor Studies
  */
 
-//primeiro parametro do describe é o nome da Test Suite
-//Segundo parametro é a function, que vai ter todos os test cases, vários blocos It
-describe('Protractor primeiro teste', function() {
+//1st parameter: Test Suite Name
+//2nd parameter: The function, where you develop the test cases(It Blocks)
+describe('First Protractor Test Suite', function() {
 	
-	//IT: primeiro parametro é o nome do test case
-	it('Abrir site do Angular', function() {
-		//codigo protractor
+	//IT: 1st parameter: Name of the Test Case
+	it('Open Angular website', function() {
+		//protractor code
 		
 	})
 	
-	it('Fechar o navegador', function() {
-		//codigo protractor
+	it('Close browser', function() {
+		//protractor code
 		
 	})
 	
