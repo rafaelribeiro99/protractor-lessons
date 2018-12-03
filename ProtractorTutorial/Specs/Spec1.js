@@ -9,6 +9,7 @@ describe('First Protractor Test Suite', function() {
 	//IT: 1st parameter: Name of the Test Case
 	it('Open Angular website', function() {
 		//protractor code
+		browser.get('https://angular.io');
 		
 	})
 	
