@@ -10,3 +10,6 @@ This project's goal is to create a fully funcional Protractor Project for academ
 - Git
 
 More will be implemented soon.
+
+Development branch: 0.1
+Stable branch: master
