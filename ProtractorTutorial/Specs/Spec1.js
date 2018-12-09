@@ -17,6 +17,7 @@ describe('First Protractor Test Suite', function() {
 		browser.sleep(3000);
 		element(by.id('getting-started')).isDisplayed();
 		
+		
 	})
 	
 	it('Close the browser', function() {
