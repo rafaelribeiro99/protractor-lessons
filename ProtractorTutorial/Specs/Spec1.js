@@ -10,6 +10,7 @@ describe('First Protractor Test Suite', function() {
 	it('Open Angular website and access Getting Started', function() {
 		//protractor code
 		//This command will open the website on the parameter
+		//browser.get('http://juliemr.github.io/protractor-demo/');
 		browser.get('https://angular.io');
 		//element(by.partialLinkText('quickstart')).click();
 		browser.sleep(3000);
