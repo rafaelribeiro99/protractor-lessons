@@ -7,6 +7,7 @@ exports.config = {
 	
 	//specs: ['Specs/Spec1.js'],
 	specs: ['ElementBasics.js'],
+	//specs: ['ChainLocators.js'],
     
 	capabilities: {
 		'browserName': 'chrome'

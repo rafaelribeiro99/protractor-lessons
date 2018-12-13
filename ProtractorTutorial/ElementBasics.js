@@ -16,8 +16,9 @@ describe('Protractor Element Demo', function(){
 		
 		element(by.model("first")).sendKeys("3");
 		element(by.model("second")).sendKeys("2");
-		element(by.model("operator")).click();
-		element(by.css("option[value='ADDITION']")).click();
+		//element(by.model("operator")).click();
+		//element(by.css("option[value='ADDITION']")).click();
+		element(by.model("operator")).click().element(by.css("option:nth-child(1)[value='ADDITION']")).click();
 		element(by.id("gobutton")).click();
 		
 		//FOR ASSERTIONS, JASMINE TAKES CARE OF RESOLVING PROMISE(ASYNCRONOUS PROBLEM)
@@ -37,8 +38,9 @@ describe('Protractor Element Demo', function(){
 		browser.driver.manage().window().setSize(width, height);
 		
 		element(by.model("first")).sendKeys("10");
-		element(by.model("operator")).click();
-		element(by.css("option[value='SUBTRACTION']")).click();
+		//element(by.model("operator")).click();
+		//element(by.css("option[value='SUBTRACTION']")).click();
+		element(by.model("operator")).click().element(by.css("option:nth-child(5)[value='SUBTRACTION']")).click();
 		element(by.model("second")).sendKeys("2");
 		element(by.id("gobutton")).click();
 		expect(element(by.css("h2[class='ng-binding']")).getText()).toBe("8");
