@@ -8,6 +8,29 @@ describe('Chain Locators', function(){
 	var x = 1;
 	var y = 1;
 	
+	function addition(a,b){
+		element(by.model("first")).sendKeys(a);
+		element(by.model("second")).sendKeys(b);
+		element(by.id("gobutton")).click();
+	}
+	
+	it('Testing Add Function', function(){
+		browser.get('http://juliemr.github.io/protractor-demo/');
+		browser.driver.manage().window().setPosition(x, y);
+		browser.driver.manage().window().setSize(width, height);
+		
+		addition(2, 2);//4
+		addition(4, 2);//6
+		addition(5, 15);//20
+		addition(50, 50);//100
+		
+		element.all(by.repeater("result in memory")).each(function(item) {
+			item.element(by.css("td:nth-child(3)")).getText().then(function(text){
+				console.log("Print With Addition:" + text);
+			})
+		})
+	})
+	
 	it('Repeater locator', function(){
 		browser.get('http://juliemr.github.io/protractor-demo/');
 		browser.driver.manage().window().setPosition(x, y);
@@ -31,6 +54,7 @@ describe('Chain Locators', function(){
 			console.log(text);
 		})
 		
+		//each method will get EACH element located on the repeater, and place its content inside the VAR "item"
 		element.all(by.repeater("result in memory")).each(function(item) {
 			item.element(by.css("td:nth-child(3)")).getText().then(function(text){
 				console.log(text);

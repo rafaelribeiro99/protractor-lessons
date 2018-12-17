@@ -8,13 +8,16 @@ exports.config = {
 	//specs: ['Specs/Spec1.js'],
 	//specs: ['ElementBasics.js'],
 	//specs: ['ChainLocators.js'],
-	specs: ['All.js'],
+	//specs: ['All.js'],
+	specs: ['Dropdowns.js'],
+	//specs: ['ElementBasics.js','ChainLocators.js'],
     
 	capabilities: {
-		'browserName': 'chrome'
+		browserName: 'chrome',
+		chromeOptions: {args: ['--disable-extensions',]}
 	    //,'browserName': 'firefox'
 	    //,'browserName': 'internet explorer'
-		//,'browserName': 'MicrosoftEdge'	
+		//,'browserName': 'MicrosoftEdge'
 		
 	}
 
