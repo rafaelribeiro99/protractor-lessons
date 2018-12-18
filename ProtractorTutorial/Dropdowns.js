@@ -3,15 +3,10 @@
  */
 
 describe('Dropdowns lesson', function(){
-	var width = 1930;
-	var height = 1030;
-	var x = 1;
-	var y = 1;
 	
 	it('Dropdown Test 1', function(){
 		browser.get('http://juliemr.github.io/protractor-demo/');
-		browser.driver.manage().window().setPosition(x, y);
-		browser.driver.manage().window().setSize(width, height);
+		browser.driver.manage().window().maximize();
 		
 		addition(2, 2);//4
 		addition(4, 2);//6
@@ -30,8 +25,7 @@ describe('Dropdowns lesson', function(){
 	it('ADDITION Operation', function(){
 		
 		browser.get('http://juliemr.github.io/protractor-demo/');
-		browser.driver.manage().window().setPosition(x, y);
-		browser.driver.manage().window().setSize(width, height);
+		browser.driver.manage().window().maximize();
 		
 		element(by.model("first")).sendKeys("3");
 		element(by.model("second")).sendKeys("2");

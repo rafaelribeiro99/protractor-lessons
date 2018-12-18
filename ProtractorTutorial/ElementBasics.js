@@ -3,16 +3,11 @@
  */
 
 describe('Protractor Element Demo', function(){
-	var width = 1930;
-	var height = 1030;
-	var x = 1;
-	var y = 1;
 	
 	it('ADDITION Operation', function(){
 		
 		browser.get('http://juliemr.github.io/protractor-demo/');
-		browser.driver.manage().window().setPosition(x, y);
-		browser.driver.manage().window().setSize(width, height);
+		browser.driver.manage().window().maximize();
 		
 		element(by.model("first")).sendKeys("3");
 		element(by.model("second")).sendKeys("2");
@@ -34,8 +29,7 @@ describe('Protractor Element Demo', function(){
 	
 	it('SUBTRACTION Operation', function(){
 		browser.get('http://juliemr.github.io/protractor-demo/');
-		browser.driver.manage().window().setPosition(x, y);
-		browser.driver.manage().window().setSize(width, height);
+		browser.driver.manage().window().maximize();
 		
 		element(by.model("first")).sendKeys("10");
 		//element(by.model("operator")).click();
