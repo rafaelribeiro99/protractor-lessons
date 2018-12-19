@@ -43,26 +43,4 @@ describe('Suite de Teste - Exemplo 1', function(){
 		})
 	})
 	
-	it('Caso de Teste - Operacao Multiplicar', function(){
-		browser.get('http://juliemr.github.io/protractor-demo/');
-		browser.driver.manage().window().maximize();
-		
-		element(by.model("first")).sendKeys("2");
-		element(by.model("operator")).click();
-		element(by.css("option[value='MULTIPLICATION']")).click();
-		element(by.model("second")).sendKeys("25");
-		element(by.id("gobutton")).click();
-		//browser.sleep(5000);
-		
-		expect(element(by.css("h2[class='ng-binding']")).getText()).toBe("50");
-		
-		element(by.css("h2[class='ng-binding']")).getText().then(function(text){
-			console.log("Resultado da multiplicação: "+text);
-		})
-		
-		
-		
-	})
-	
-		
 })

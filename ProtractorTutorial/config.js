@@ -5,7 +5,7 @@
 exports.config = {
 	seleniumAddress: 'http://localhost:4444/wd/hub',
 	
-	specs: ['TechDay/Exemplo3.js'],
+	specs: ['TechDay/Exemplo1.js'],
     
 	capabilities: {
 		browserName: 'chrome',
@@ -13,7 +13,6 @@ exports.config = {
 	    //,'browserName': 'firefox'
 	    //,'browserName': 'internet explorer'
 		//,'browserName': 'MicrosoftEdge'
-		
 	}
 
 };

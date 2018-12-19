@@ -4,12 +4,25 @@
 
 describe('Suite de Teste - Exemplo 2', function(){
 	
+	primeiroCampo = element(by.model("first"));
+	segundoCampo = element(by.model("second"));
+	operador = element(by.model("operator"));
+	soma = element(by.css("option:nth-child(1)[value='ADDITION']"));
+	botaoGo = element(by.id("gobutton"));
+	resultado = element(by.css("h2[class='ng-binding']"));	
+	
+	
 	function adicao(a,b){
-		element(by.model("first")).sendKeys(a);
-		element(by.model("second")).sendKeys(b);
-		element(by.model("operator")).click().element(by.css("option:nth-child(1)[value='ADDITION']")).click();//CHAIN LOCATORS
-		//element(by.css("option[value='ADDITION']")).click();
-		element(by.id("gobutton")).click();
+		//element(by.model("first")).sendKeys(a);
+		//element(by.model("second")).sendKeys(b);
+		//element(by.model("operator")).click().element(by.css("option:nth-child(1)[value='ADDITION']")).click();//CHAIN LOCATORS
+		////element(by.css("option[value='ADDITION']")).click();
+		//element(by.id("gobutton")).click();
+		primeiroCampo.sendKeys(a);
+		segundoCampo.sendKeys(b);
+		operador.click();
+		soma.click();
+		botaoGo.click();
 	}
 	
 	it('Caso de Teste - Operacao Adição', function(){

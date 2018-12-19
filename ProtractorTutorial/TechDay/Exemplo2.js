@@ -13,6 +13,7 @@ describe('Suite de Teste - Exemplo 2', function(){
 		element(by.model("second")).sendKeys("2");
 		element(by.model("operator")).click();
 		element(by.css("option[value='ADDITION']")).click();
+		//CHAIN LOCATORS - CAPTURAR ELEMENTO EM CADEIA
 		//element(by.model("operator")).click().element(by.css("option:nth-child(1)[value='ADDITION']")).click();
 		element(by.id("gobutton")).click();
 		
