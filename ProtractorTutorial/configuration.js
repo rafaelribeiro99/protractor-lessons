@@ -9,7 +9,8 @@ exports.config = {
 	//specs: ['ElementBasics.js'],
 	//specs: ['ChainLocators.js'],
 	//specs: ['All.js'],
-	specs: ['Dropdowns.js'],
+	//specs: ['Dropdowns.js'],
+	specs: ['Actions.js'],
 	//specs: ['ElementBasics.js','ChainLocators.js'],
     
 	capabilities: {
