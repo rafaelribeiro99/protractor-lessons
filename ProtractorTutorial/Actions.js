@@ -17,7 +17,19 @@ describe('Actions Demo', function() {
 			
 			element.all(by.css("div[ng-mouseover*='onSearchResultOver']")).get(0).click();
 			element(by.css("a[ng-href*='London/River Island']")).click().then(function(){
-				browser.sleep(3000);
+				browser.getTitle().then(function(title){
+					console.log("Title of the page before switch: "+title);
+				})
+				browser.getAllWindowHandles().then(function(handles){
+					browser.switchTo().window(handles[1]);
+					browser.getTitle().then(function(title){
+						console.log("Title of the page after switch: "+title);
+					})
+				browser.switchTo().window(handles[0]);
+				browser.getTitle().then(function(title){
+					console.log("Title of the page 3rd switch: "+title);
+				})
+				})
 			})
 		})
 	
